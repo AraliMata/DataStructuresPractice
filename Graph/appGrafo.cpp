@@ -1,4 +1,3 @@
-//Yoceline Aralí Mata Ledezma A01562116
 #include <iostream>
 #include "Graph.h"
 
