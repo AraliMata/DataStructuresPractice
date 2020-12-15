@@ -5,13 +5,11 @@ int PriorityQueue::getLeftChildIndex(int parentIndex)
 	return 2 * parentIndex + 1;
 }
 
-int PriorityQueue::getRightChildIndex(int parentIndex)
-{
+int PriorityQueue::getRightChildIndex(int parentIndex){
 	return 2 * parentIndex + 2;
 }
 
-int PriorityQueue::getParentIndex(int childIndex)
-{
+int PriorityQueue::getParentIndex(int childIndex){
 	return (childIndex - 1) / 2;
 }
 
@@ -52,8 +50,7 @@ void PriorityQueue::orderDown() {
 
 }
 
-int PriorityQueue::size()
-{
+int PriorityQueue::size(){
 	return heap.size();
 }
 
@@ -62,8 +59,7 @@ void PriorityQueue::push(int data){
 	orderUp();
 }
 
-int PriorityQueue::pop()
-{
+int PriorityQueue::pop(){
 	if (!isEmpty()) {
 		int root = heap[0];
 		swap(0, heap.size() - 1);
@@ -76,8 +72,7 @@ int PriorityQueue::pop()
 	}
 }
 
-int PriorityQueue::top()
-{
+int PriorityQueue::top(){
 	if (!isEmpty())
 		return heap[0];
 	else
@@ -86,13 +81,11 @@ int PriorityQueue::top()
 	return -1;
 }
 
-bool PriorityQueue::isEmpty()
-{
+bool PriorityQueue::isEmpty(){
 	return size()  == 0;
 }
 
-void PriorityQueue::swap(int val1, int val2)
-{
+void PriorityQueue::swap(int val1, int val2){
 	int temp = heap[val1];
 	heap[val1] = heap[val2];
 	heap[val2] = temp;
