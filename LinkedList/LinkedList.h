@@ -67,7 +67,7 @@ public:
 				i++;
 			}
 			if (i != index) {
-				std::cout << "It doesn't exist the element " << index << ". Data of last element will be returned " << endl;
+				std::cout << "The element doesn't exist" << index << ". Data of last element will be returned " << endl;
 			}
 			return curr->data;
 		}
